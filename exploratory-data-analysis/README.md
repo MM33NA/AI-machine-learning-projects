@@ -1,11 +1,11 @@
-# AAL Apparel — Q4 2020 Sales Analysis
+### AAL Apparel — Q4 2020 Sales Analysis
 
 > **Course-End Project | Applied Data Science with Python**
 > Analysing fourth-quarter sales data for AAL Apparel across all Australian states to support data-driven investment decisions for the S&M leadership team.
 
 ---
 
-## Table of Contents
+### Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
 - [Project Structure](#project-structure)
@@ -17,7 +17,7 @@
 
 ---
 
-## Project Overview
+### Project Overview
 
 AAL is a well-established Australian apparel brand (founded 2000) catering to all demographic groups — Kids, Men, Women, and Seniors — across seven states. With business surging, the CEO tasked the Sales & Marketing (S&M) head with two objectives:
 
@@ -28,7 +28,7 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 
 ---
 
-## Dataset
+### Dataset
 
 | Property | Detail |
 |----------|--------|
@@ -42,7 +42,7 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 
 ---
 
-## Project Structure
+### Project Structure
 
 ```
 ├── AAL_Sales_Analysis_Clean.ipynb   # Main analysis notebook (Google Colab)
@@ -53,9 +53,9 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 
 ---
 
-## Methodology
+### Methodology
 
-### 1. Data Wrangling
+#### 1. Data Wrangling
 - Inspected for missing values using `isna()` / `notna()` — none found
 - Converted `Date` column from `object` → `datetime64`
 - Detected and stripped leading whitespace from all categorical columns (`Time`, `State`, `Group`)
@@ -63,7 +63,7 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 - Applied **Min-Max Normalization** to `Sales` and `Unit` columns (preferred over standardization given the non-normal distribution)
 - Used `GroupBy` for **data chunking** — segmenting by State, Group, and Time for independent aggregate comparisons
 
-### 2. Data Analysis
+#### 2. Data Analysis
 - Descriptive statistics: mean, median, mode, std, skewness, kurtosis
 - Shapiro-Wilk normality test — confirmed right-skewed, non-normal distribution
 - Group-level and state-level sales aggregation
@@ -71,7 +71,7 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 - Weekly, monthly, quarterly, and daily resampling using Pandas `resample()`
 - Units–Sales regression (near-perfect linear correlation, R² ≈ 1.0)
 
-### 3. Data Visualisation
+#### 3. Data Visualisation
 - Box plots — outlier detection
 - KDE histograms — distribution analysis
 - Bar charts — group, state, and time-of-day comparisons
@@ -80,13 +80,13 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 - Time-series line charts — daily, weekly, monthly, quarterly trends
 - **Interactive Plotly dashboard** — 6-panel strategic summary for S&M leadership
 
-### 4. Report Generation
+#### 4. Report Generation
 - Full narrative report with findings, insights, and strategic recommendations
 - Markdown-integrated throughout the notebook
 
 ---
 
-## Key Findings
+### Key Findings
 
 | # | Finding |
 |---|---------|
@@ -99,7 +99,7 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 
 ---
 
-## Technologies Used
+### Technologies Used
 
 | Library | Purpose |
 |---------|---------|
@@ -113,14 +113,14 @@ This project delivers a full end-to-end data science pipeline — wrangling, sta
 
 ---
 
-## How to Run
+### How to Run
 
-### Option 1 — Google Colab (recommended)
+#### Option 1 — Google Colab (recommended)
 1. Open `AAL_Sales_Analysis_Clean.ipynb` in [Google Colab](https://colab.research.google.com/)
 2. Run all cells — the notebook automatically clones the dataset from this repository
 3. No additional setup required
 
-### Option 2 — Local Jupyter
+#### Option 2 — Local Jupyter
 ```bash
 # 1. Clone this repository
 git clone https://github.com/MM33NA/AI-machine-learning-projects.git
@@ -135,7 +135,7 @@ jupyter notebook AAL_Sales_Analysis_Clean.ipynb
 
 ---
 
-## Results & Report
+### Results & Report
 
 The full business report (`AAL_Q4_2020_Sales_Analysis_Report.docx`) includes:
 - Executive summary with Q4 KPIs
